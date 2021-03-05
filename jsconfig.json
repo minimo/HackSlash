@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@scenes/*": ["src/scenes/*"],
+      "@elements/*": ["src/elements/*"],
+      "@extensions/*": ["src/extensions/*"]
+    }
+  },
+  "exclude": ["node_modules", "publish"]
+}

@@ -1,5 +1,5 @@
 import { phina, CanvasApp, DisplayScene } from "phina.js/build/phina.esm";
-import { SceneFlow } from "/src/scenes/SceneFlow"
+import { SceneFlow } from "@scenes/SceneFlow"
 
 console.log('Version: 0.0.001 (Date 2021-03-05, Commit #)');
 
