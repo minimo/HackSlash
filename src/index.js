@@ -1,5 +1,6 @@
 import { phina, CanvasApp, DisplayScene } from "phina.js/build/phina.esm";
 import { SceneFlow } from "@scenes/SceneFlow"
+import { SystemConfig } from "./Config";
 
 console.log('Version: 0.0.001 (Date 2021-03-05, Commit #)');
 
@@ -7,13 +8,16 @@ if (process.env.NODE_ENV !== 'production') {
   console.log('##### Development mode #####');
 }
 
-DisplayScene.defaults.width = 960;
-DisplayScene.defaults.height = 640;
+const screenWidth = SystemConfig.screen.width;
+const screenHeight = SystemConfig.screen.height;
+
+DisplayScene.defaults.width = screenWidth;
+DisplayScene.defaults.height = screenHeight;
 
 phina.main(()=> {
   const appOption = {
-    width: 960,
-    height: 640,
+    width: screenWidth,
+    height: screenHeight,
     fps: 60,
   };
   const app = new CanvasApp(appOption);

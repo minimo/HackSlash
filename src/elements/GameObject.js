@@ -1,4 +1,5 @@
 import { DisplayElement, Sprite, Vector2 } from "phina.js/build/phina.esm";
+import { GameConfig } from "../Config";
 
 /**
  * ゲーム内オブジェクト管理用基底クラス
@@ -9,8 +10,22 @@ import { DisplayElement, Sprite, Vector2 } from "phina.js/build/phina.esm";
  */
 export class GameObject extends DisplayElement {
  
+  /**
+   * Creates an instance of GameObject.
+   * @param {*} options
+   * @memberof GameObject
+   */
   constructor(options) {
+    options = (options || {});
     super(options);
+
+    /**
+     * 表示スプライト
+     * @type {Sprite}
+     * @memberof GameObject
+     */
+    this.sprite = options.sprite || null;
+
     /**
      * 重力有効フラグ
      * @type {boolean}
@@ -22,7 +37,7 @@ export class GameObject extends DisplayElement {
      * @type {Vector2}
      * @memberof GameObject
      */
-    this.gravity = new Vector2(0, 0);
+    this.gravity = GameConfig.world.gravity;
 
     /**
      * オブジェクトの経過フレーム数
@@ -32,7 +47,9 @@ export class GameObject extends DisplayElement {
     this.time = 0;
 
     this.on('enterframe', () => {
-      this.position.add();
+      if (this.isGravity) {
+        this.position.add(this.gravity);
+      }
       this.time++;
     });
   }

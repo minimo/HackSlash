@@ -18,5 +18,4 @@ module.exports = {
       '@phina' : path.resolve(__dirname, "node_modules/phina.js/build/phina.esm"),
     },
   },
-  target: ["es6"],
 }
