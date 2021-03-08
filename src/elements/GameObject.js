@@ -1,5 +1,6 @@
 import { DisplayElement, Sprite, Vector2 } from "phina.js/build/phina.esm";
 import { GameConfig } from "../Config";
+import { $safe, randint } from "@extensions/Utils";
 
 /**
  * ゲーム内オブジェクト管理用基底クラス
@@ -16,7 +17,7 @@ export class GameObject extends DisplayElement {
    * @memberof GameObject
    */
   constructor(options) {
-    options = (options || {});
+    options = $safe.call({}, options, GameObject.defaulOptions);
     super(options);
 
     /**
@@ -52,6 +53,10 @@ export class GameObject extends DisplayElement {
       }
       this.time++;
     });
+  }
+
+  static defaulOptions = {
+    sprite: null,
   }
 
 }
