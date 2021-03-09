@@ -1,6 +1,6 @@
-import { phina, CanvasApp, DisplayScene } from "phina.js/build/phina.esm";
-import { SceneFlow } from "@scenes/SceneFlow"
-import { SystemConfig } from "./Config";
+import { phina, CanvasApp, DisplayScene } from 'phina.js/build/phina.esm';
+import { SceneFlow } from '@scenes/SceneFlow';
+import { SystemConfig } from './Config';
 
 console.log('Version: 0.0.001 (Date 2021-03-05, Commit #)');
 

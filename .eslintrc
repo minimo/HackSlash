@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "root": true,
+  "extends": "eslint:recommended",
+  "rules": {
+      "no-console": 0,
+      "no-empty": "warn",
+      "no-unused-vars": ["error", { "args": "none" }],
+      "no-unexpected-multiline": "error",
+      "no-unreachable": "error"
+  },
+  "globals": {
+    "window": true,
+    "process": true
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  }
+}

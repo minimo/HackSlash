@@ -5,6 +5,19 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js', // 入力元のファイル名(エントリポイント)
+  module: {
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /(node_modules|publish)/,
+        loader: "eslint-loader",
+        options: {
+            fix: true
+        }
+      },
+    ]
+  },
   plugins: [
     new webpack.ProvidePlugin({
         'PHINA': 'phina.js/build/phina.esm.js'
@@ -18,5 +31,4 @@ module.exports = {
       '@phina' : path.resolve(__dirname, "node_modules/phina.js/build/phina.esm"),
     },
   },
-  presets: ['env', 'xyz'],
 }

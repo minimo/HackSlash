@@ -1,10 +1,10 @@
-import { DisplayScene, Label } from "phina.js/build/phina.esm";
-import { $safe } from "../extensions/Utils";
+import { DisplayScene, Label } from 'phina.js/build/phina.esm';
+import { $safe } from '../extensions/Utils';
 
 export class TitleScene extends DisplayScene {
 
   constructor(params) {
-    params = $safe.call({}, params, GameTitleScene.defaults);
+    params = $safe.call({}, params, TitleScene.defaults);
     super(params);
 
     this.backgroundColor = params.backgroundColor;
@@ -31,7 +31,7 @@ export class TitleScene extends DisplayScene {
           touchLabel: {
             className: Label,
             arguments: {
-              text: "TOUCH START",
+              text: 'TOUCH START',
               fill: params.fontColor,
               stroke: false,
               fontSize: 32,

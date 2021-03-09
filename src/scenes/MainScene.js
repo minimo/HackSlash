@@ -1,6 +1,6 @@
-import { GameObject } from "@elements/GameObject";
-import { Collision, DisplayElement, DisplayScene, Label, Sprite } from "phina.js/build/phina.esm";
-import { $safe, randint } from "@extensions/Utils";
+// import { GameObject } from '@elements/GameObject';
+import { DisplayScene } from 'phina.js/build/phina.esm';
+import { $safe } from '@extensions/Utils';
 
 /**
  * メインシーン

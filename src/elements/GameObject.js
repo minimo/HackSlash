@@ -1,6 +1,6 @@
-import { DisplayElement, Sprite, Vector2 } from "phina.js/build/phina.esm";
-import { GameConfig } from "../Config";
-import { $safe, randint } from "@extensions/Utils";
+import { DisplayElement } from 'phina.js/build/phina.esm';
+import { GameConfig } from '../Config';
+import { $safe } from '@extensions/Utils';
 
 /**
  * ゲーム内オブジェクト管理用基底クラス
@@ -55,8 +55,5 @@ export class GameObject extends DisplayElement {
     });
   }
 
-  static defaulOptions = {
-    sprite: null,
-  }
-
+  static test() { return 0; }
 }

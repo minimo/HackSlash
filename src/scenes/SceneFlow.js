@@ -1,7 +1,7 @@
-import { LoadingScene, ManagerScene } from "phina.js/build/phina.esm";
-import { AssetCatalog } from "../assets/AssetCatalog";
-import { MainScene } from "./MainScene";
-import { TitleScene } from "./TitleScene";
+import { LoadingScene, ManagerScene } from 'phina.js/build/phina.esm';
+import { AssetCatalog } from '../assets/AssetCatalog';
+import { MainScene } from './MainScene';
+import { TitleScene } from './TitleScene';
 
 /**
  * シーンフロー制御クラス
@@ -17,25 +17,25 @@ export class SceneFlow extends ManagerScene {
    */
   constructor() {
     super({
-      startLabel: "loading",
+      startLabel: 'loading',
       scenes: [{
-        label: "loading",
+        label: 'loading',
         className: LoadingScene,
-        nextLabel: "title",
+        nextLabel: 'title',
         arguments: {
           assets: AssetCatalog,
         },
       },{
-        label: "title",
+        label: 'title',
         className: TitleScene,
-        nextLabel: "main",
+        nextLabel: 'main',
         arguments: {
-          title: "Hack and Slash"
+          title: 'Hack and Slash'
         },
       },{
-        label: "main",
+        label: 'main',
         className: MainScene,
-        nextLabel: "title",
+        nextLabel: 'title',
       }],
     });
   }
