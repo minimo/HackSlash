@@ -1,5 +1,4 @@
 import { Vector2 } from "phina.js/build/phina.esm"
-
 /**
  * システム設定
  * @type {*}

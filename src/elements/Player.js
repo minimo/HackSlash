@@ -16,8 +16,15 @@ export class Player extends GameObject{
     super({
       sprite: new Sprite("actor4", 32, 32),
       animation: {
-        "idle": [0, 1, 2, 3],
+        interval: 3,
+        frame: {
+          "idle": [0, 1, 2, 3],
+        }
       },
     });
+  }
+
+  updateFrame(app) {
+
   }
 }
