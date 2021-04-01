@@ -1,6 +1,7 @@
 import { DisplayElement } from 'phina.js/build/phina.esm';
-import { GameConfig } from '../Config';
 import { $safe } from '@extensions/Utils';
+import { GameConfig } from '../Config';
+import { AnimationSet } from 'src/common/AnimationSet';
 
 /**
  * ゲーム内オブジェクト管理用基底クラス
@@ -25,6 +26,19 @@ export class GameObject extends DisplayElement {
      * @memberof GameObject
      */
     this.sprite = options.sprite || null;
+    if (this.sprite) {
+      this.sprite.addChildTo(this);
+    }
+
+    /**
+     * スプライトアニメーション
+     * @type {AnimationSet}
+     * @memberof GameObject
+     */
+    this.animationSet = new AnimationSet();
+    if (options.animations) {
+      
+    }
 
     /**
      * 重力有効フラグ
@@ -45,10 +59,6 @@ export class GameObject extends DisplayElement {
      * @memberof GameObject
      */
     this.time = 0;
-
-    if (this.sprite) {
-      this.sprite.addChildTo(this);
-    }
 
     this.on('enterframe', app => {
       this.beforeUpdateFrame(app);

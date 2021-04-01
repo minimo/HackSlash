@@ -1,4 +1,4 @@
-import { DisplayElement, Sprite, Vector2 } from "phina.js/build/phina.esm";
+import { Sprite } from "phina.js/build/phina.esm";
 import { GameObject } from "./GameObject";
 
 /**
@@ -15,11 +15,12 @@ export class Player extends GameObject{
   constructor() {
     super({
       sprite: new Sprite("actor4", 32, 32),
-      animation: {
-        interval: 3,
-        frame: {
-          "idle": [0, 1, 2, 3],
-        }
+      animations: {
+        "idle": {
+          frequency: 3,
+          frames: [0, 1, 2, 3],
+          next: "idle",
+        },
       },
     });
   }
