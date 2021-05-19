@@ -1,7 +1,7 @@
 import { DisplayElement } from 'phina.js/build/phina.esm';
 import { $safe } from '@extensions/Utils';
 import { GameConfig } from '../Config';
-import { AnimationSet } from 'src/common/AnimationSet';
+import { AnimationSet } from '../common/AnimationSet';
 
 /**
  * ゲーム内オブジェクト管理用基底クラス
