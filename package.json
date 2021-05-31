@@ -29,6 +29,6 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "phina.js": "https://github.com/minimo/phina.js/releases/download/esm-alpha.minimo.2/phina.esm-alpha.minimo.2.tgz"
+    "phina.js": "https://github.com/minimo/phina.js/releases/download/esm-alpha.minimo.3/phina.esm-alpha.minimo.3.tgz"
   }
 }
