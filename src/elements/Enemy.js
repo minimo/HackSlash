@@ -7,6 +7,6 @@ export class Enemy extends GameObject{
    * @memberof Enemy
    */
   constructor() {
-    super();
+    super({});
   }
 }
