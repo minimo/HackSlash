@@ -1,3 +1,4 @@
+import { Accessory } from 'phina.js/build/phina.esm';
 import { Animation } from "./Animation";
 
 /**
@@ -6,7 +7,7 @@ import { Animation } from "./Animation";
  * @class AnimationSet
  * @extends {GameObject}
  */
-export class AnimationSet {
+export class AnimationSet extends Accessory {
   /**
    * Creates an instance of AnimationSet.
    * @memberof AnimationSet
