@@ -13,6 +13,7 @@ export class AnimationSet extends Accessory {
    * @memberof AnimationSet
    */ 
   constructor() {
+    super();
     this._animations = [];
   }
 
